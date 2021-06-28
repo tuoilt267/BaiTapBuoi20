@@ -9,6 +9,7 @@ public class Main {
         System.out.println("Bài tập 1: Đếm số người theo từng quốc tịch in ra màn hình");
         System.out.println("Bài tập 2: Sắp xếp theo tên những người trên 25 tuổi rồi in ra màn hình");
         System.out.println("Bài tập 3: Tính trung bình tuổi của người theo từng quốc gia");
+        System.out.println("Bài tập 4: In ra màn hình đánh giá tuổi mỗi người");
         System.out.print("Nhập bài tập muốn kiểm tra: ");
         int bt= sc.nextInt();
         BaiTapBuoi20 bt20 = new BaiTapBuoi20();
@@ -23,6 +24,10 @@ public class Main {
             }
             case 3: {
                 bt20.averageAgebyCountry();
+                break;
+            }
+            case 4: {
+                bt20.danhGiabyAge();
                 break;
             }
             default: {

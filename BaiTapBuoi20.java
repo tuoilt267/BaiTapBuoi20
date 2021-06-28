@@ -55,7 +55,28 @@ public class BaiTapBuoi20 {
 //       Tính trung bình tuổi của người theo từng quốc gia
     public void  averageAgebyCountry() {
         HashMap<String, Double> averageAgebyCountry = new HashMap<>();
-        people.stream().forEach(person -> Collectors.groupingBy(Person::getNationality, Collectors.averagingInt(Person::getAge)));
-        people.forEach(System.out::println);
+        people.stream().forEach(
+                person -> Collectors.groupingBy(Person::getNationality, Collectors.averagingInt(Person::getAge)));
+
+        for (Map.Entry<String, Double> entry : averageAgebyCountry.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+    }
+//   In ra màn hình đánh giá tuổi mỗi người
+    public void danhGiabyAge(){
+        String danhgia = "";
+        for (Person person: people){
+            if (person.getAge()<20){
+                danhgia = "nổi loạn";
+            }
+            else if (person.getAge()>=20&& person.getAge()<=30){
+                danhgia = "việc làm";
+            }
+            else if (person.getAge()>=31 && person.getAge()<=40){
+                danhgia = "sự nghiệp";
+            }
+            else danhgia = "hưởng thụ";
+            System.out.println(person + " - " + danhgia);
+        }
     }
 }
