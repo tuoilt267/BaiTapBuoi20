@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,10 +13,14 @@ public class Main {
         switch (bt){
             case 1: {
                 bt20.countNation();
+//                System.out.println("\nCách 2: \n");
+//                bt20.countNation1();
                 break;
             }
             case 2: {
                 bt20.arrageNamebyAge();
+//                System.out.println("\nCách 2: \n");
+//                bt20.arrageNamebyAge1();
                 break;
             }
             case 3: {
